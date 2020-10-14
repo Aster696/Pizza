@@ -20,7 +20,7 @@
                     <div>
                         <table>
                             <tr>
-                                <td><input type="email" name="email" placeholder="Enter your Email" size="54"/></td>
+                                <td><input type="text" name="username" placeholder="Enter your name" size="54"/></td>
                             </tr>
                         </table>
                     </div>
@@ -28,7 +28,7 @@
                     <div>
                         <table>
                             <tr>
-                                <td><input type="password" name="password" placeholder="Create your password" size="54"/></td>
+                                <td><input type="password" name="password" placeholder="Enter your password" size="54"/></td>
                             </tr>
                         </table>
                     </div>

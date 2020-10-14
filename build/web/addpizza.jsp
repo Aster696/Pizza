@@ -13,12 +13,13 @@
     </head>
     <body>
         <jsp:include page="header.jsp"></jsp:include>
+   
         <%
-            if( session.getAttribute("user")==null){
-                out.println("<script>" + "alert('Login to add data');" + "window.location='login.jsp';" + "</script>");
-                
-                //response.sendRedirect("login.jsp");
-            }
+//           if( session.getAttribute("user")==null){
+//                out.println("<script>" + "alert('Login to add data');" + "window.location='login.jsp';" + "</script>");
+//                
+//                //response.sendRedirect("login.jsp");
+//            }
         %>
         <br>
         <div class="formcontainer">

@@ -43,9 +43,10 @@
                     <div class=""><a title="${pi.description}">Description:</a> </div>
                     <div class="price">Price: Rs. ${pi.price} </div>
                     <a class="btn btn-warning" href="${pi.link}">+ Order</a>
+                
                     <a href="EditController?pizza_id=${pi.pizza_id}" class="btn btn-info">Edit</a>
                     <a class="btn btn-danger" href="DeleteController?pizza_id=${pi.pizza_id}">Delete</a>
-                    
+                 
                 </div>
                      
             </div>

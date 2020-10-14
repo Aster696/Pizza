@@ -10,6 +10,7 @@
         
     </head>
     <body>
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
         <br>
         <footer class="section footer-classic context-dark bg-image" style="background: #2d3246;">
         <div class="container">
@@ -25,15 +26,15 @@
               <h5>Contacts</h5>
               <dl class="contact-list">
                 <dt>Address:</dt>
-                <dd>798 South Park Avenue, Jaipur, Raj</dd>
+                <dd>XXXX, XXXX, XXXXX, XXXXX</dd>
               </dl>
               <dl class="contact-list">
                 <dt>email:</dt>
-                <dd><a href="mailto:#">dkstudioin@gmail.com</a></dd>
+                <dd><a href="mailto:#">Example@xgmail</a></dd>
               </dl>
               <dl class="contact-list">
                 <dt>phones:</dt>
-                <dd><a href="tel:#">https://karosearch.com</a> <span>or</span> <a href="tel:#">https://karosearch.com</a>
+                <dd><a href="tel:#">xxxxxx</a> <span>or</span> <a href="tel:#">xxxxxx</a>
                 </dd>
               </dl>
             </div>

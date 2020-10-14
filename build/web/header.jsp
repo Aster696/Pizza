@@ -37,10 +37,12 @@
                     <a href="index.jsp">Home</a>
                     <a href="pizza.jsp">Pizza</a>
                     <input type="search" placeholder="Search" size="105"/><a href="#">Search</a>
-                    <a href="login.jsp">Login</a>                 
+                    <a href="login.jsp">Login</a>            
+                    
                 </div>
             </nav>
         </header>
         <br>
+        
     </body>
 </html>

@@ -23,7 +23,7 @@
                     <div>
                         <table>
                             <tr>
-                                <td><input type="text" name="user_name" placeholder="Enter your Name" size="54"/></td>
+                                <td><input type="text" name="username" placeholder="Enter your Name" size="54"/></td>
                             </tr>
                         </table>
                     </div>

@@ -21,7 +21,7 @@ public class RegistryController extends HttpServlet{
    @Override
     protected void doPost(HttpServletRequest req,HttpServletResponse resp) throws ServletException,IOException{
         User user = new User();
-        user.setUser_name(req.getParameter("user_name"));
+        user.setUsername(req.getParameter("username"));
         user.setEmail(req.getParameter("email"));
         user.setAddress(req.getParameter("address"));
         user.setContact(Integer.parseInt(req.getParameter("contact")));
@@ -30,8 +30,8 @@ public class RegistryController extends HttpServlet{
         try {
             Class.forName("org.apache.derby.jdbc.ClientDriver");
             Connection con = DriverManager.getConnection(sql,name,pass);
-            PreparedStatement pst = con.prepareStatement("insert into users (user_name,email,contact,address,password,status) values(?,?,?,?,?,?)");
-            pst.setString(1, user.getUser_name());
+            PreparedStatement pst = con.prepareStatement("insert into users (username,email,contact,address,password,status) values(?,?,?,?,?,?)");
+            pst.setString(1, user.getUsername());
             pst.setString(2, user.getEmail());
             pst.setInt(3, user.getContact());
             pst.setString(4, user.getAddress());

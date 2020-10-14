@@ -28,36 +28,31 @@ public class LoginController extends HttpServlet{
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException{
     
         User user = new User();
-        user.setEmail(req.getParameter("email"));
+        user.setUsername(req.getParameter("username"));
         user.setPassword(req.getParameter("password"));
-       
-        String email = user.getEmail();
-        String userpass = user.getPassword();
+        
+        String username = req.getParameter("username");
+        String password = req.getParameter("password");
         
         PrintWriter out = resp.getWriter();
         
         try {
             Class.forName("org.apache.derby.jdbc.ClientDriver");
             Connection con = DriverManager.getConnection(sql,name,pass);
-            PreparedStatement pst = con.prepareStatement("select * from users where email=? and password=?");
-            pst.setString(1, email);
-            pst.setString(2, userpass);
+            PreparedStatement pst = con.prepareStatement("select * from users where username=? and password=?");
+            pst.setString(1, user.getUsername());
+            pst.setString(2, user.getPassword());
             ResultSet rs = pst.executeQuery();
-            
-                if(rs.next()){
-                    HttpSession session = req.getSession();
-                    if(email.equals("admin@gmail.com") && userpass.equals("admin")){
-                        
+            HttpSession session = req.getSession();
+                if(rs.next()){  
+                    if(username.equals("Admin") && password.equals("admin")){
                         session.setAttribute("user", user);
-                        
-                       out.println("<script>"+"alert('Welcome Admin');"+"window.location='addpizza.jsp';"+"</script>");
+                        out.println("<script>"+"alert('Welcome Admin');"+"window.location='addpizza.jsp';"+"</script>");
                        // resp.sendRedirect("addpizza.jsp");
                     }else{
-                        //session.setAttribute("user", user);
                         out.println(""+"<script>"+"alert('Welcome ');"+"window.location='pizza.jsp';"+"</script>"+"");
-                    
                     //resp.sendRedirect("login.jsp");            
-                    }
+                    } 
                 }else{
                     out.println(""+"<script>alert('Failed to login email or password invalid');"+"window.location='login.jsp';</script>"+"");
                 }
