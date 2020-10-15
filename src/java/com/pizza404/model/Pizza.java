@@ -1,7 +1,6 @@
 package com.pizza404.model;
 
 
-
 public class Pizza {
 
     private int id;
@@ -71,7 +70,6 @@ public class Pizza {
     public void setLink(String link) {
         this.link = link;
     }
-    
     
     
     public int getQuantity() {
