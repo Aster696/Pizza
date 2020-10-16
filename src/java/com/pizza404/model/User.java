@@ -1,6 +1,5 @@
 package com.pizza404.model;
 
-
 public class User {
     
     private int user_id;
